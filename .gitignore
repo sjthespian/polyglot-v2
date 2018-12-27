@@ -67,3 +67,6 @@ test/
 .env-dev
 binaries/
 backup/
+
+# Webstorm IDE
+.idea
