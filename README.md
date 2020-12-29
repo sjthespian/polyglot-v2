@@ -2,10 +2,11 @@
 
 [![Build Status](https://travis-ci.org/UniversalDevicesInc/polyglot-v2.svg?branch=master)](https://travis-ci.org/UniversalDevicesInc/polyglot-v2)
 
-NOTE: This is a for of the [Universal Devices polyglot v2](https://github.com/UniversalDevicesInc/polyglot-v2) in an attempt to get it reliably working under Docker. This has the following changes:
+NOTE: This is a fork of the [Universal Devices polyglot v2](https://github.com/UniversalDevicesInc/polyglot-v2) in an attempt to get it reliably working under Docker. This has the following changes:
 * Added NPM modules in the Dockerfile for the node servers I use
-* Added python modules in the Dockerfil for the node servers I use
-* Patch to MQTT to use a custom certificate if one is defined. This resolves certificate errors as running in docker requires setting MQTT_HOST to point to the docker host, and that is not in the default certificate.
+* Added python modules in the Dockerfile for the node servers I use
+* Addition of a new environment varialbe HOST_FQDN
+* Patch the browser-side javascript to use the new FQDN value instead of MQTT_HOST to connect to the back-end server. While this will work fine as long as polyglot and mqtt are running on the same system it won't work in docker or with a mqtt on a separate host
 
 Polyglot is a Middleware between the [Universal Devices ISY Home Automation device](http://www.universal-devices.com/) and any number of external devices and services.
 
