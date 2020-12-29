@@ -172,6 +172,9 @@ BIND_IP='192.168.1.2'
 # Overrides the IP address Polyglot sends to ISY to accept commands
 HOST_IP='192.168.1.2'
 
+# Overrides the fully qualified domain name for the local host
+HOST_FQDN='polyglot.example.com'
+
 # Overrides the Port that Polyglot listens on for its frontend interface.
 HOST_PORT='3000'
 
